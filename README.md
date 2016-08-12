@@ -22,7 +22,7 @@ A common validator by PHP. Very flight, very easy to use.
 
 示例代码
 
-    $v = x5()->load('lib.Validator');
+    include 'Validator.php'
     $data = array(
         'name' => 'zhangtao',
         'age' => 18,
