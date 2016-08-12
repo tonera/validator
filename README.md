@@ -24,7 +24,7 @@ A common validator by PHP. Very flight, very easy to use.
 
     include 'Validator.php'
     $data = array(
-        'name' => 'zhangtao',
+        'name' => 'tonera',
         'age' => 18,
         'sex' => true,
         'address' => 'beijing',
