@@ -15,22 +15,21 @@ A common validator by PHP. Very flight, very easy to use.
 
 
     示例代码
-        $v = x5()->load('lib.Validator');
-        $data = array(
-            'name' => 'zhangtao',
-            'age' => 18,
-            'sex' => true,
-            'address' => 'beijing',
-            'postcode' => '100034',
-        );
-        $rules = array(
-            'name' => array('type' => 'string', 'len' => 8, 'lenMax' => 8, 'lenMin' => 2, 'notNull' => true),
-            'sex' => array('type' => 'bool'),
-            'address' => array('type' => 'string', 'match' => "/jing$/i"),
-            'postcode' => array('type' => 'numeric', 'len' => 6),
-        );
-        
-        $v->init($rules, $data);
-        $r = $v->validate();
-        print_r($v->errors);
-        var_dump($r);
+    $v = x5()->load('lib.Validator');
+    $data = array(
+        'name' => 'zhangtao',
+        'age' => 18,
+        'sex' => true,
+        'address' => 'beijing',
+        'postcode' => '100034',
+    );
+    $rules = array(
+        'name' => array('type' => 'string', 'len' => 8, 'lenMax' => 8, 'lenMin' => 2, 'notNull' => true),
+        'sex' => array('type' => 'bool'),
+        'address' => array('type' => 'string', 'match' => "/jing$/i"),
+        'postcode' => array('type' => 'numeric', 'len' => 6),
+    );
+    $v->init($rules, $data);
+    $r = $v->validate();
+    print_r($v->errors);
+    var_dump($r);
