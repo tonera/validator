@@ -37,6 +37,7 @@ A common validator by PHP. Very flight, very easy to use.
         'address' => array('type' => 'string', 'match' => "/jing$/i"),
         'postcode' => array('type' => 'numeric', 'len' => 6),
     );
+    $v = new Validator();
     $v->init($rules, $data);
     $r = $v->validate();
     print_r($v->errors);
